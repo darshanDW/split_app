@@ -85,7 +85,8 @@ router.get('/expenses', async (req, res) => {
 router.put('/expenses/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { amount, description, split, split_type } = req.body;
+  
+    const { amount, description, split, split_type,category } = req.body;
     const update = {};
 
     if (amount) update.amount = amount;
@@ -132,6 +133,7 @@ router.put('/expenses/:id', async (req, res) => {
 
     res.json({ success: true, data: expense, message: 'Expense updated successfully' });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ success: false, message: 'Failed to update expense', error });
   }
 });
@@ -154,7 +156,9 @@ router.get('/balances', async (req, res) => {
     // Calculate balances
     const users = await User.find({});
     const expenses = await Expense.find({});
-
+if (expenses.length === 0) {
+      return res.json({ success: true, data: users.reduce((acc, u) => ({ ...acc, [u.name]: 0 }), {}) });
+    }
     const balances = {};
     users.forEach(u => balances[u.name] = 0);
 
