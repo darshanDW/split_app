@@ -17,7 +17,7 @@ git clone <https://github.com/darshanDW/split_appl> cd backend
 > [https://split-app-jrw7.onrender.com/api/v1/group]
 
 ## Postman Collection
-> [Link to your public Postman collection or GitHub Gist]
+> [https://gist.github.com/darshanDW/9e390686ec4f9b38b458f8a7cb8efb96]
 
 ## API Documentation
 
