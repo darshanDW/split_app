@@ -17,7 +17,7 @@ git clone <https://github.com/darshanDW/split_appl> cd backend
 > [https://split-app-jrw7.onrender.com/api/v1/group]
 
 ## Postman Collection
-> [https://gist.github.com/darshanDW/9e390686ec4f9b38b458f8a7cb8efb96]
+> [https://gist.githubusercontent.com/darshanDW/9e390686ec4f9b38b458f8a7cb8efb96/raw/e6b326789e9c3b86ea8cc52a80e0d67d7989f510/gistfile1.json]
 
 ## API Documentation
 
@@ -50,8 +50,10 @@ git clone <https://github.com/darshanDW/split_appl> cd backend
   "category": "Food"
 }
 
-
+```
 2. Percentage Split
+```json
+
 {
   "amount": 1000,
   "description": "Hotel Bill",
@@ -64,8 +66,9 @@ git clone <https://github.com/darshanDW/split_appl> cd backend
   "category": "Travel"
 }
 
-
+```
 3. Exact Share Split
+```json
 
 {
   "amount": 900,
@@ -78,8 +81,10 @@ git clone <https://github.com/darshanDW/split_appl> cd backend
   ],
   "category": "Utilities"
 }
-
+```
 Example Response
+```json
+
 {
   "success": true,
   "data": { ...expenseObject },
