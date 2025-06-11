@@ -89,7 +89,8 @@ Example Response
   "success": true,
   "data": { ...expenseObject },
   "message": "Expense added successfully"
-}```
+}
+```
 
 Settlement Logic
 The settlement logic determines who owes whom and how much after all expenses have been added and split.
